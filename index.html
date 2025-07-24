@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krishna Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <spline-viewer 
+        url="https://prod.spline.design/eYOBKrEVSbg0vdCK/scene.splinecode"
+        class="spline-preloader">
+      </spline-viewer>
+      <div class="click-to-enter">Click to Enter</div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+      <nav class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">Krishna <span>&#9776;</span></button>
+          <div class="dropdown-content">
+            <a href="#about">About Me</a>
+            <a href="#services">Services</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="first">
+        <div data-aos="fade-right" data-aos-duration="1500" class="left">
+          <button><span>&#x2022;</span> Available for work</button>
+          <h1>Brand & UI/UX Designer Based In London</h1>
+        </div>
+
+        <div class="center-content">
+          <h1>Krishna.</h1>
+        </div>
+
+        <div data-aos="fade-up-left" data-aos-duration="1500" class="right">
+          <p>
+            I’m Krish Sharma, a BTech CSE (AI/ML) student and certified Full Stack Developer skilled in HTML, CSS, JavaScript, C, and C++. 
+            I build modern, user-focused web solutions and innovative IoT-based projects. Passionate about front-end development, I aim to craft impactful digital experiences.
+          </p>
+          <button class="cta-btn">
+            <span class="icon">→</span> See my works
+          </button>
+        </div>
+
+        <spline-viewer
+          class="model"
+          url="https://prod.spline.design/LfGu4FCQyyre6Sd5/scene.splinecode"
+        ></spline-viewer>
+      </div>
+    </main>
+
+    <!-- About Section -->
+    <section id="about" class="about" data-aos="fade-right" data-aos-duration="1500">
+      <div class="left-content">
+        <h1>About Me</h1>
+        <p>
+            I’m Krish Sharma, a BTech CSE student specializing in AI/ML at IILM University, Greater Noida.
+            With a strong foundation in HTML, CSS, JavaScript, C, and C++, I’ve completed certifications in Full Stack Development (GeeksforGeeks) and C/C++ programming (Ducat Coaching).
+            I’m passionate about front-end development and love creating clean, interactive, and user-focused websites.
+            My experience includes building projects like a smart train bogie locking & alert system for a hackathon, 
+            a modern Tic Tac Toe game with AI, and a personal portfolio website.
+            I’m always eager to explore new technologies such as IoT integrations, 3D web experiences (Spline), and advanced UI/UX design to deliver premium digital solutions.
+            Alongside my technical work, I co-founded “Hustlers”, a premium customized notebook brand.
+        </p>
+      </div>
+      <div class="right-img">
+        <img src="20250720234802430.jpg" alt="">
+      </div>
+      
+      <div class="skills-marquee">
+        <div class="marquee-content">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>C/C++</span><span>Video Editor</span>
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>C/C++</span><span>Video Editor</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.35/build/spline-viewer.js"></script>
+<script>
+  // Wait for user click to hide preloader
+  document.getElementById('preloader').addEventListener('click', () => {
+  // Scroll to top
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); 
+
+  const preloader = document.getElementById('preloader');
+  preloader.classList.add('hidden');
+
+  setTimeout(() => {
+    document.body.classList.add('loaded');
+    AOS.init({
+      offset: 50,
+      duration: 1200,
+      once: true,
+    });
+    AOS.refresh();
+  }, 1000);
+});
+  
+</script>
+
+  </body>
+</html>
